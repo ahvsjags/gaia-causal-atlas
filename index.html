@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="An interactive evidence atlas of climate extremes, ecological memory and fire-risk differences.">
+<title>GAIA–Causal · What the first extreme leaves behind</title>
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="tour.css">
+<script defer src="data/study.js"></script>
+<script defer src="atlas.js"></script>
+<script defer src="tour.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+ <div class="frame topbar-inner">
+  <a class="brand" href="#home"><img width="28" height="28" src="assets/mark.svg" alt=""><span>GAIA<span class="brand-slash">/</span>CAUSAL<small>RESEARCH ATLAS</small></span></a>
+  <nav aria-label="Sections"><a href="#atlas">Atlas</a><a href="#satellite">Satellite</a><a href="#evidence">Findings</a><a href="#lab">Model lab</a></nav>
+  <button class="line-button" id="summary-open" type="button" aria-haspopup="dialog">Overview</button>
+ </div>
+</header>
+<main id="main">
+<section class="opening" id="home">
+ <div class="frame">
+  <div class="hero-heading">
+   <p class="eyebrow"><i></i> CLIMATE EXTREMES / ECOLOGICAL MEMORY</p>
+   <div class="headline"><h1>What the first extreme<br> <em>leaves behind.</em></h1>
+    <div><p>The second climate extreme encounters a landscape already changed by the first. We follow that history through satellite observations, soil-water measurements and historical fire records.</p><div class="hero-actions"><button type="button" class="primary" id="tour-open" data-tour="full">▶ &nbsp; Play the research tour <span aria-hidden="true">↗</span></button><a class="hero-text" href="#atlas">Explore the atlas ↓</a></div></div>
+   </div>
+  </div>
+  <section id="atlas" aria-labelledby="atlas-label" class="world">
+   <div class="atlas-bar"><span id="atlas-label"><b>01</b> &nbsp; Four-region climate sampling frame</span><span>ESA CCI BIOMASS V7 <i>·</i> 2022 CONTEXT</span></div>
+   <div class="map-plane">
+    <img class="world-img" src="assets/global-atlas.webp" width="2200" height="637" alt="Global biomass context with four CI18 climate sampling windows: western North America, Mediterranean, southern Africa, and southeastern Australia">
+    <div id="map-targets" aria-label="Select a sampling window"></div>
+   </div>
+   <div class="region-strip" id="region-strip" aria-label="Regional map windows"></div>
+   <div class="region-focus" id="region-focus" hidden><img id="focus-region-image" alt="" width="680" height="355"><div><p class="eyebrow">CI18 / REGIONAL ZOOM</p><h3 id="focus-region-name"></h3><p id="focus-region-description"></p><button id="close-region-zoom" type="button" class="line-button">Close zoom ×</button></div></div>
+   <div class="atlas-foot">
+    <div id="region-readout" aria-live="polite"></div>
+    <details><summary>Map legend and scope</summary><p>Dots denote sampling strata, not fire risk:
+      <span class="key"><i style="--dot:#a5d8a3"></i>Forest</span>
+      <span class="key"><i style="--dot:#f09bbd"></i>Shrubland</span>
+      <span class="key"><i style="--dot:#75c5ef"></i>Savanna / grassland</span>
+      <span class="key"><i style="--dot:#f3c389"></i>Cropland</span>.
+      The background is woody above-ground biomass, not a fire-risk surface.</p>
+     <div class="biomass-key"><span>0</span><div></div><span>450 Mg ha⁻¹</span></div>
+    </details>
+   </div>
+  </section>
+  <div class="scope-stats" aria-label="Study scale">
+   <div><strong>2012–2024</strong><small>Cross-continental evidence</small></div>
+   <div><strong>5,634</strong><small>Coordinates in the climate frame</small></div>
+   <div><strong>469</strong><small>Spatial blocks in that frame</small></div>
+   <div><strong>964</strong><small>CI11 episodes · 2012–2018</small></div>
+  </div>
+ </div>
+</section>
+
+<section class="era-panel" aria-labelledby="time-title">
+ <div class="frame era-layout">
+  <div><p class="eyebrow">THE STUDY CLOCK</p><h2 id="time-title">One study.<br>Different evidence years.</h2></div>
+  <div>
+   <div id="era-tabs" class="era-tabs" role="group" aria-label="Period"></div>
+   <div id="era-readout" class="era-readout" aria-live="polite"></div>
+  </div>
+ </div>
+</section>
+
+<section class="paper section" id="satellite" aria-labelledby="sat-title">
+ <div class="frame">
+  <div class="section-heading"><span class="section-no">02 / OBSERVATION</span><div><h2 id="sat-title">The canopy tells only<br>part of the story.</h2><p>Explore matching satellite views, then see how the vegetation and water-use indicators differed between stress sequences.</p></div></div>
+  <div class="sat-layout">
+   <div class="viewer">
+    <div class="seg" role="group" aria-label="Satellite scene" id="scene-toggle"><button type="button" data-scene="modis" aria-pressed="true">MODIS · GPP / QA</button><button type="button" data-scene="landsat" aria-pressed="false">Landsat · fire example</button></div>
+    <div class="viewer-head"><strong id="scene-name"></strong><span id="scene-date"></span></div>
+    <div class="compare" id="compare-viewport" style="--wipe:50%">
+     <img id="scene-base" width="560" height="550" alt="">
+     <img id="scene-top" width="560" height="550" alt="">
+     <div class="wipe-line" aria-hidden="true"><span>↔</span></div>
+     <div class="scene-tags"><span id="tag-left"></span><span id="tag-right"></span></div>
+     <input id="wipe" aria-label="Image comparison divider" type="range" min="0" max="100" value="50">
+    </div>
+    <div id="scene-thumbs" class="thumbs" role="group" aria-label="Scene detail windows"></div>
+    <p id="scene-credit" class="micro"></p>
+    <details><summary id="mosaic-title">Show all 18 archived views</summary><div id="mosaic" class="mosaic"></div></details>
+   </div>
+   <div class="contrast">
+    <p class="eyebrow">CI442 / BETWEEN-STRESS CHANGE</p><h3>Canopy signals rose.<br>Relative water use fell.</h3>
+    <p class="subtle">Heat-first minus low-soil-water-first, in the units of each indicator.</p>
+    <div id="veg-table"></div>
+    <p class="micro">Pointwise 95% intervals; product samples differ. The 1,331-episode ET/PET–FPAR–LAI overlap is a pre-adjustment coverage count, not a common-sample fit.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="ink section" id="evidence" aria-labelledby="evidence-title">
+ <div class="frame">
+  <div class="section-heading"><span class="section-no">03 / CORE FINDING</span><div><h2 id="evidence-title">Fire risk changed sign<br>across memory groups.</h2><p>In the historical analysis, heat-first histories had lower estimated risk in the two lower physiological-memory quartiles and higher risk in the two upper quartiles.</p></div></div>
+  <div class="evidence-layout">
+    <div class="chart-block">
+     <div id="evidence-tabs" class="seg inkseg" role="group" aria-label="Historical contrasts or refits"><button type="button" data-evidence="ci11" aria-pressed="true">CI11 · historical</button><button type="button" data-evidence="refits" aria-pressed="false">Completed-history refits</button></div>
+     <div class="chart-note" id="evidence-context"></div>
+     <div id="evidence-plot" class="chart-mount"></div>
+     <details><summary>Read the data</summary><div id="evidence-table"></div></details>
+    </div>
+    <div id="evidence-insight" class="evidence-insight" aria-live="polite"></div>
+  </div>
+ </div>
+</section>
+
+<section class="paper section" id="lab" aria-labelledby="lab-title">
+ <div class="frame">
+  <div class="section-heading"><span class="section-no">04 / MODEL LAB</span><div><h2 id="lab-title">When does history<br>improve a prediction?</h2><p>Two models developed for this study, two targets. Compare archived predictions rather than running a new fit.</p></div></div>
+  <div class="lab-nav" role="group" aria-label="Model" id="lab-tabs"><button type="button" data-lab="soil" aria-pressed="true"><small>MODEL 01</small> Rainfall memory → soil water</button><button type="button" data-lab="fire" aria-pressed="false"><small>MODEL 02</small> Vegetation memory → fire-risk contrast</button></div>
+  <div id="lab-soil">
+   <div class="model-layout">
+    <div class="model-visual">
+     <div class="model-top"><div><b>USCRN 03055</b><p>20-cm soil water · 49 matched days · 14 July–31 August 2022</p></div><a href="data/trace.csv" download>Trace CSV ↓</a></div>
+     <div class="demo-control"><button type="button" class="play-button" id="soil-play" aria-pressed="false"><span aria-hidden="true">▶</span> Play 49-day trace</button><button type="button" id="soil-reset" class="text-button">Reset ↺</button><span class="demo-status" id="soil-demo-status">Archived model replay</span></div><div id="soil-checks" class="curve-switches" role="group" aria-label="Show or hide predictions"></div>
+     <div id="soil-plot" class="chart-mount"></div>
+     <label class="day-slider" for="soil-day"><span>Inspect a day</span><input id="soil-day" type="range" min="0" max="48" value="21"><output id="soil-date"></output></label>
+     <div id="soil-readout" class="sample-values" aria-live="polite"></div><p class="micro" id="soil-error-readout"></p>
+     <details id="kernel-expander"><summary>How the rainfall memory works · 90 days before 31 August 2022</summary><div id="kernel-plot" class="chart-mount"></div><p class="micro">Same archived rainfall input. Lines show exp(−lag/τ) for τ = 1 and 30 days; prediction-day rain is excluded.</p></details>
+    </div>
+    <aside class="model-story">
+     <p class="eyebrow">HELD YEARS / 2022–2024</p><h3>Memory beat both baselines.</h3>
+     <p>At 37 stations and 23,578 matched station-days, the 30-day model lowered equal-station RMSE by <b>16.6%</b> versus the monthly baseline and <b>14.1%</b> versus the one-day rainfall model.</p>
+     <div class="seg" id="bench-tabs" role="group" aria-label="Benchmark comparator"><button type="button" data-bench="0" aria-pressed="true">vs monthly</button><button type="button" data-bench="1" aria-pressed="false">vs one-day</button></div><div id="bench-readout" class="bench-readout" aria-live="polite"></div><div id="soil-summary"></div>
+     <details><summary>How the model was tested</summary><p>2019–2020 training, 2021 selection among six scales, then a refit through 2021 before scoring 2022–2024. These are held-year tests on station measurements, not fire validation.</p><img class="process-art" src="assets/rainfall-process.webp" alt="Conceptual cutaway showing rainfall, attenuation of precipitation history, and a soil-water probe" width="1600" height="550" loading="lazy"><p class="micro">Conceptual illustration from Fig. 4; not a station image.</p></details>
+    </aside>
+   </div>
+  </div>
+  <div id="lab-fire" hidden>
+   <div class="fire-replay-head"><div><b>See where memory helps.</b><p>Watch the group fits, the four-region comparison and individual classification in sequence.</p></div><button type="button" class="play-button" id="fire-tour-open" data-tour="fire">▶ &nbsp; Play fire-model demo</button></div>
+   <div class="model-layout">
+    <div class="model-visual">
+     <div id="fire-modes" class="seg" role="group" aria-label="Fire model evaluation"><button type="button" data-fire="groups" aria-pressed="true">12 development groups</button><button type="button" data-fire="loro" aria-pressed="false">Four-region holdout</button><button type="button" data-fire="pr" aria-pressed="false">Single-event classification</button></div>
+     <div id="fire-viz"></div>
+    </div>
+    <aside id="fire-story" class="model-story" aria-live="polite"></aside>
+   </div>
+  </div>
+ </div>
+</section>
+
+<footer id="sources">
+ <div class="frame footer">
+  <div><p class="eyebrow">05 / ARCHIVE &amp; SOURCES</p><h2>Trace what you see.</h2><p>Built from archived display summaries and figure panels. This research demo is not a live warning system. It does not run new fits or include protected outcomes.</p></div>
+  <div class="downloads"><a href="data/provenance.json" download>Asset and data provenance <span>JSON ↓</span></a><a href="data/trace.csv" download>Station 03055 daily trace <span>CSV ↓</span></a><a href="data/groups.csv" download>CI36 group display values <span>CSV ↓</span></a><a href="data/loro.csv" download>Four-region holdout summaries <span>CSV ↓</span></a></div>
+  <div class="source-credits"><b>Data and imagery credits</b>
+   <ul>
+    <li>Santoro, M. and Cartus, O. (2026). ESA Biomass Climate Change Initiative, global forest above-ground biomass v7.0, via CEDA. <a href="https://doi.org/10.5285/6429d1aafe1e43b9b414e4a5a7f8b903">Dataset and citation</a>. The atlas uses 2022 biomass for geographic context.</li>
+    <li>NASA LP DAAC: <a href="https://doi.org/10.5067/MODIS/MOD17A2H.061">Terra MODIS MOD17A2H Collection 6.1</a>. False-colour Landsat 8: <a href="https://science.nasa.gov/earth/great-pine-tier-fire-tasmania/">NASA Earth Observatory and the USGS National Land Imaging Image Collections</a>.</li>
+    <li>Station observations: <a href="https://www.ncei.noaa.gov/access/crn/products.html">NOAA U.S. Climate Reference Network</a> (<a href="https://doi.org/10.1175/BAMS-D-12-00170.1">Diamond et al.</a>; <a href="https://doi.org/10.1175/JHM-D-12-0146.1">Bell et al.</a>). Map outlines: Natural Earth. The soil cutaway is a conceptual illustration, not a station image.</li>
+   </ul>
+  </div>
+  <div class="footer-end"><span>GAIA–CAUSAL / INTERACTIVE RESEARCH ATLAS</span><a href="#home">Back to top ↑</a></div>
+ </div>
+</footer>
+</main>
+<dialog id="research-tour" class="research-tour" aria-labelledby="tour-heading" lang="en">
+ <div class="tour-shell">
+  <header class="tour-head">
+   <div class="tour-brand"><img src="assets/mark.svg" width="26" height="26" alt=""><div><b>GAIA / CAUSAL</b><small>INTERACTIVE RESEARCH TOUR</small></div></div>
+   <h2 id="tour-heading">Research tour</h2>
+   <button type="button" id="tour-close" aria-label="Close research tour">×</button>
+  </header>
+  <nav class="tour-tabs" id="tour-tabs" aria-label="Choose a chapter"></nav>
+  <div class="tour-body" id="tour-body" tabindex="0">
+   <div class="tour-time-thread" aria-label="Observation period and evidence source">
+    <span id="tour-time-period"></span><span id="tour-time-note"></span>
+   </div>
+   <div id="tour-scene" class="tour-scene"></div>
+  </div>
+  <footer class="tour-controls">
+   <div class="tour-progress"><span id="tour-progress-label"></span><div class="tour-track" aria-hidden="true"><i id="tour-progress-bar"></i></div><span id="tour-count"></span></div>
+   <div class="tour-controls-row">
+    <button type="button" id="tour-toggle">▶ Play</button>
+    <div class="tour-steps"><button type="button" id="tour-prev">← Previous</button><button type="button" id="tour-next">Next →</button></div>
+    <button type="button" id="tour-restart" title="Restart the tour">↺ Restart</button>
+    <span id="tour-status" class="tour-sr" aria-live="polite"></span>
+   </div>
+  </footer>
+ </div>
+</dialog>
+ <dialog id="summary-dialog" aria-labelledby="overview-heading"><div class="dialog-inner">
+ <button type="button" class="dialog-close" aria-label="Close overview">×</button>
+ <p class="eyebrow">GAIA–CAUSAL / OVERVIEW</p><h2 id="overview-heading">What does the next extreme encounter?</h2>
+ <p>The atlas brings together observations from 2012–2024 across western North America, the Mediterranean, southern Africa, and southeastern Australia. The climate frame covers 5,634 sampling sites; the core CI11 fire-risk analysis uses 964 historical episodes from 2012–2018.</p>
+ <p>Explore the geographic coverage, compare satellite scenes, and replay two models developed for this study. The soil-water model tests whether rainfall history beats local baselines. The fire-risk model tests whether ecological memory improves estimates of contrasts between groups.</p>
+ <a class="primary" href="#lab" id="overview-go">Open the model lab ↘</a>
+ </div></dialog>
+</body>
+</html>

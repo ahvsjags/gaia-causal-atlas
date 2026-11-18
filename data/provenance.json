@@ -1,0 +1,279 @@
+{
+  "description": "Public display bundle. The chart values are archived summaries; no per-event fire labels or protected endpoints are included.",
+  "archived_tables": {
+    "trace": {
+      "file": "trace.csv",
+      "sha256": "bd7a49390fb3eece0efd382d0208d70cc8b4cbe2b8cc819af163e824fe4df66d"
+    },
+    "kernel": {
+      "file": "kernel.csv",
+      "sha256": "cf5abbf285ffa7466e9af72ffa9130e3e8edeed716cd9664147e7c45b53cb3a0"
+    },
+    "groups": {
+      "file": "groups.csv",
+      "sha256": "8f4b5239dc601b44b9241e87f87d5937315f7c22ce825e93794fd2d01e5ee0ed"
+    },
+    "loro": {
+      "file": "loro.csv",
+      "sha256": "5b21fbef01ce25acb58f0ef8dc65dba4081407706a047ffce0ec737e000be5a6"
+    }
+  },
+  "image_crops": {
+    "global-atlas": {
+      "file": "global-atlas.webp",
+      "sha256": "dffcf2ad093e0cac49c944dc4e059ad9ec6221d465429c3683c26c8fa02344f6",
+      "role": "2022 woody biomass with archived CI18 site-coverage marks; not a fire-risk map"
+    },
+    "region-1": {
+      "file": "region-1.webp",
+      "sha256": "18c82ca3f8b0f23014b8deeee5fcf383952b8b467c73a133259bf8b639b40e85",
+      "role": "Regional crop of the CI18 sampling-frame figure"
+    },
+    "region-2": {
+      "file": "region-2.webp",
+      "sha256": "ab343994d36e6328aa0e254a6d5ce40ac16658ebc3328e53af09cc7116e043eb",
+      "role": "Regional crop of the CI18 sampling-frame figure"
+    },
+    "region-3": {
+      "file": "region-3.webp",
+      "sha256": "2912dc931f9bff428dd11fea7bfb668ef994ae4e65a05905f1c76f0497150ec5",
+      "role": "Regional crop of the CI18 sampling-frame figure"
+    },
+    "region-4": {
+      "file": "region-4.webp",
+      "sha256": "126234db547946e1b1258e93f996ac101cc905ccc52c9a181b3900a312a48ac8",
+      "role": "Regional crop of the CI18 sampling-frame figure"
+    },
+    "modis-ctx-1": {
+      "file": "modis-ctx-1.webp",
+      "sha256": "8fcb498464a0c9b0f6c360426cdee7ad8a8d393e56dd2b317d04423746b9d122",
+      "role": "Terra MODIS MOD17A2H.061 archived scene, GPP or QA"
+    },
+    "modis-gpp-1": {
+      "file": "modis-gpp-1.webp",
+      "sha256": "20f83f10130a419cf17c7e414f65aa86bfb05132c52685d5eb66f1789e2382d9",
+      "role": "Terra MODIS MOD17A2H.061 archived scene, GPP or QA"
+    },
+    "modis-qa-1": {
+      "file": "modis-qa-1.webp",
+      "sha256": "cca6b04e99d4cde4ef406b05ca1cbbfd1d372814a572e78d203fb41bff7b6142",
+      "role": "Terra MODIS MOD17A2H.061 archived scene, GPP or QA"
+    },
+    "modis-ctx-2": {
+      "file": "modis-ctx-2.webp",
+      "sha256": "78d2cea79423b7f43e4b583a3c626f518a5b2b0a7ccbddbb1589aad5d895ba58",
+      "role": "Terra MODIS MOD17A2H.061 archived scene, GPP or QA"
+    },
+    "modis-gpp-2": {
+      "file": "modis-gpp-2.webp",
+      "sha256": "8a70650492ca3d0b3a97c4dc148280af6f47b1cebe57745f095020f71419789d",
+      "role": "Terra MODIS MOD17A2H.061 archived scene, GPP or QA"
+    },
+    "modis-qa-2": {
+      "file": "modis-qa-2.webp",
+      "sha256": "d9e70ef041da54da2513f4e7752608d4f8b09e316e88fe1572d3bc2779b3d311",
+      "role": "Terra MODIS MOD17A2H.061 archived scene, GPP or QA"
+    },
+    "modis-ctx-3": {
+      "file": "modis-ctx-3.webp",
+      "sha256": "bc197b416fd96444a95e6cd501c16a236c77b3a2c46634984e43df26dd6fecd3",
+      "role": "Terra MODIS MOD17A2H.061 archived scene, GPP or QA"
+    },
+    "modis-gpp-3": {
+      "file": "modis-gpp-3.webp",
+      "sha256": "e1196db556d205d30fd6e96a135c2cd1d59c27ff5d77dcf8b613596e37b68865",
+      "role": "Terra MODIS MOD17A2H.061 archived scene, GPP or QA"
+    },
+    "modis-qa-3": {
+      "file": "modis-qa-3.webp",
+      "sha256": "58b253b3ce83e3e9fcb64c7801535f2de96cc773f78d8dff7407ea598ebe6b0f",
+      "role": "Terra MODIS MOD17A2H.061 archived scene, GPP or QA"
+    },
+    "modis-ctx-4": {
+      "file": "modis-ctx-4.webp",
+      "sha256": "d11b8318c1728440cc330cd4fff42dc870649daa8b7d08d17abe5d52a3dbd6ca",
+      "role": "Terra MODIS MOD17A2H.061 archived scene, GPP or QA"
+    },
+    "modis-gpp-4": {
+      "file": "modis-gpp-4.webp",
+      "sha256": "4e7e6c9b80b9a84a55d54eb2fb1e139c746d49b44ff0dd26341faa521360dd83",
+      "role": "Terra MODIS MOD17A2H.061 archived scene, GPP or QA"
+    },
+    "modis-qa-4": {
+      "file": "modis-qa-4.webp",
+      "sha256": "74598987916b8597a0826cd795bf379299c28ee2856f344e8c6d76dd61527ed7",
+      "role": "Terra MODIS MOD17A2H.061 archived scene, GPP or QA"
+    },
+    "modis-ctx-5": {
+      "file": "modis-ctx-5.webp",
+      "sha256": "f0953b9277009a7dc31d2031d763585c5088637a45c3f63c4b8ca79d1fa78da7",
+      "role": "Terra MODIS MOD17A2H.061 archived scene, GPP or QA"
+    },
+    "modis-gpp-5": {
+      "file": "modis-gpp-5.webp",
+      "sha256": "f5a81f762db5c95d1a65d95c7f74651a3a3a776fa3dccdd6636919e653364a85",
+      "role": "Terra MODIS MOD17A2H.061 archived scene, GPP or QA"
+    },
+    "modis-qa-5": {
+      "file": "modis-qa-5.webp",
+      "sha256": "a56267b038869bcee49f0d374f0a8a145c6395aa5393bd6f3378eb78d0ec9142",
+      "role": "Terra MODIS MOD17A2H.061 archived scene, GPP or QA"
+    },
+    "modis-ctx-6": {
+      "file": "modis-ctx-6.webp",
+      "sha256": "9c4d5baa03cad053d171d948ecd07ae412be65a62bdf76bd5717e09ebe89365f",
+      "role": "Terra MODIS MOD17A2H.061 archived scene, GPP or QA"
+    },
+    "modis-gpp-6": {
+      "file": "modis-gpp-6.webp",
+      "sha256": "56b4b950a14d903c5189b6cc651974b1ea956b44d2a144d88738f69f9311485e",
+      "role": "Terra MODIS MOD17A2H.061 archived scene, GPP or QA"
+    },
+    "modis-qa-6": {
+      "file": "modis-qa-6.webp",
+      "sha256": "1c3b038aff6ca25d5622a1e2c471cba2aefa7c17e76a96bca27d05b7d06763a6",
+      "role": "Terra MODIS MOD17A2H.061 archived scene, GPP or QA"
+    },
+    "landsat-ctx-1": {
+      "file": "landsat-ctx-1.webp",
+      "sha256": "6d086367635a7744f0c42d3b339391a16f45f296c33aa6a585372afc78bd0c89",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-pre-1": {
+      "file": "landsat-pre-1.webp",
+      "sha256": "1941eaefff6f46f777cc6ffc7184e1ee8a04b6912e7c226321627bbe1ebc608c",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-post-1": {
+      "file": "landsat-post-1.webp",
+      "sha256": "1b5c785a42a10ed8b3cab44a6ca6157c744c689aa4e00e4c4d85ada646ab4e85",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-ctx-2": {
+      "file": "landsat-ctx-2.webp",
+      "sha256": "0e6d44a06c16b7fcfbef3ee41c44c81df09dedeb6613ff70cda01476b360b34e",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-pre-2": {
+      "file": "landsat-pre-2.webp",
+      "sha256": "501e890bef33955c023c3fc9e5b416175fb9f33a3177ceeecbea89ec5ad9efd7",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-post-2": {
+      "file": "landsat-post-2.webp",
+      "sha256": "86d8702cadd0e1232ac01d6238e39f51387f4dd60f0271070f34f463cbf49f27",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-ctx-3": {
+      "file": "landsat-ctx-3.webp",
+      "sha256": "10f7ab550489d256c6e7870aea5943b80e10cdfe60c3da53719da75030717704",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-pre-3": {
+      "file": "landsat-pre-3.webp",
+      "sha256": "6ac075421bd3f07c2564eae6de5d8959e486593890375a0c8e73cabed46a22d9",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-post-3": {
+      "file": "landsat-post-3.webp",
+      "sha256": "da308225969206fca013480f3a3eb431ec40ad623cbdb5173e9db5a576fff160",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-ctx-4": {
+      "file": "landsat-ctx-4.webp",
+      "sha256": "9062bc16be3bb3ff2c253acebe50ae145b233994ebe3a92c3e3c8ca28270719d",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-pre-4": {
+      "file": "landsat-pre-4.webp",
+      "sha256": "9caf3babc93908d6285874702ec97739d1f47235d5bcd4192faf764103a3afb6",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-post-4": {
+      "file": "landsat-post-4.webp",
+      "sha256": "358c5c5dca89b00214fbd5d002a2cd7bc11398c3486a53d99c706185d47a252d",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-ctx-5": {
+      "file": "landsat-ctx-5.webp",
+      "sha256": "4e2f5a2fc4e455255e41f45ea53e96456555d99fe879e42d1d52401c0ee33521",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-pre-5": {
+      "file": "landsat-pre-5.webp",
+      "sha256": "e9098e054b9ab65260ad4f67b5d9ee13a56e44e4ab1bbe873289ffd2aea49ab3",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-post-5": {
+      "file": "landsat-post-5.webp",
+      "sha256": "161f8be693211ee615967439e5ecf65a1e9f955b9adc91c18ee6d97fcd8278d5",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-ctx-6": {
+      "file": "landsat-ctx-6.webp",
+      "sha256": "4ba3cfa791cfd97284ba959a5b6f2beef6038966781a15bce29bddb908778a34",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-pre-6": {
+      "file": "landsat-pre-6.webp",
+      "sha256": "046d2a2d51df1ef5f288944bedb4b92497de6e1ad4598292a9b4bb01e94a8073",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-post-6": {
+      "file": "landsat-post-6.webp",
+      "sha256": "61f82f197ba7d9e10db593145c0a67bba99ef96717a2c80e7ba84983f332427f",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-ctx-7": {
+      "file": "landsat-ctx-7.webp",
+      "sha256": "b4c444a709dcf68f57b990d09c8f2ca23b1fd6ee63de68bded73a07388dbf925",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-pre-7": {
+      "file": "landsat-pre-7.webp",
+      "sha256": "70d049e39cf02eadd43211f0367df6f74b843c6331ab78f19852b68305390cb6",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-post-7": {
+      "file": "landsat-post-7.webp",
+      "sha256": "ce67d2fd8a795c10008e8d319236b9fea6a6874149eaa6f4592a4f77a95e15e0",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-ctx-8": {
+      "file": "landsat-ctx-8.webp",
+      "sha256": "3a102c04745c104dd818a685724647fddfcf1c7eac1c1d440bb22daf07c5ab7b",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-pre-8": {
+      "file": "landsat-pre-8.webp",
+      "sha256": "a418fb255554068d78ec2e827b86e729880095fb3a578ff22ca52536df8f4d3d",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "landsat-post-8": {
+      "file": "landsat-post-8.webp",
+      "sha256": "9fff362b4b9024d39621ee396c5f1b65e663b6e0a905d22dd74d43944775355a",
+      "role": "NASA/USGS Landsat 8 Great Pine Tier false colour illustration; not an analysis event"
+    },
+    "rainfall-process": {
+      "file": "rainfall-process.webp",
+      "sha256": "a621d27cea163b74f70fb7e29c303810a3065efcc01a0a268c9a5bc0ddfb1b82",
+      "role": "Conceptual illustration only, not a station image or infiltration simulation"
+    },
+    "pr-spatial": {
+      "file": "pr-spatial.webp",
+      "sha256": "33134e054cb2397cff152de100505002d3a9d974613565af2bb2ed43be32c5d6",
+      "role": "CI16 archived precision-recall curves, spatial cross-validation"
+    },
+    "pr-loro": {
+      "file": "pr-loro.webp",
+      "sha256": "67854ccde10057e8ddcad43ed9fcda26a58f9829785312d369f710257aba9b5c",
+      "role": "CI16 archived precision-recall curves, leave region out"
+    }
+  },
+  "credits": {
+    "biomass": "https://doi.org/10.5285/6429d1aafe1e43b9b414e4a5a7f8b903",
+    "modis": "https://doi.org/10.5067/MODIS/MOD17A2H.061",
+    "landsat": "https://science.nasa.gov/earth/great-pine-tier-fire-tasmania/",
+    "station_observations": "https://www.ncei.noaa.gov/access/crn/products.html"
+  }
+}
